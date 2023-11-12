@@ -114,7 +114,7 @@ rssi > $rssiThreshold]
 
 :if ([:len ($advertisements)] != 0) do={
   :put ("stat/IoT-O142-KNOT/KEYTAICY ON")
-:log info "  Send mqtt message stat/IoT-O142-KNOT/KEY ON";
+:log info "  Send mqtt message stat/IoT-KNOT/KEY ON";
   /iot mqtt publish broker="$broker" topic="$topic" message=ON}
   /iot/bluetooth/scanners/advertisements clear
 }
